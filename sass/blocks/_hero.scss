@@ -1,0 +1,154 @@
+.hero {
+  min-height: calc(100vh - 70px);
+  background-color: black;
+  background-image: url("../../assets/Hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero__info {
+  padding: 100px;
+  color: white;
+}
+
+.hero__subtitle {
+  @include d-flex(flex-start, 7px);
+  border: 1px solid #ffffff30;
+  border-radius: 50px;
+  max-width: max-content;
+  padding: 8px 14px;
+}
+
+.hero__mini {
+  padding: 5px;
+  background-color: #9855ff;
+  color: #000;
+  border-radius: 40px;
+}
+.hero__title {
+  font-size: 82px;
+  line-height: 84px;
+  max-width: 492px;
+  margin: 28px 0;
+}
+
+.hero__text {
+  font-size: 20px;
+  line-height: 31px;
+  max-width: 544px;
+  margin-bottom: 28px;
+}
+.hero__email {
+  display: flex;
+  border: 1px solid #ffffff30;
+  border-radius: 8px;
+  padding: 5px;
+  max-width: max-content;
+}
+.hero__input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  width: 280px;
+}
+
+.hero__input::placeholder {
+  color: #ffffff50;
+}
+.hero__sm {
+  display: none;
+}
+
+.hero__partners-box {
+  margin-top: 50px;
+  @include d-flex(flex-start, 20px);
+}
+.hero__partner-text {
+}
+.hero__parners {
+  @include d-flex(flex-start, 20px);
+}
+.hero__partner {
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero__parners {
+    max-width: 500px;
+    overflow-x: scroll;
+  }
+}
+
+// tablet
+@media only screen and (max-width: 810px) {
+  .hero__title {
+    font-size: 62px;
+    line-height: 62px;
+    max-width: 400px;
+    margin: 20px 0;
+  }
+
+  .hero__text {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+
+  .hero__parners {
+    max-width: 300px;
+    overflow-x: scroll;
+  }
+}
+
+
+// phone
+
+@media only screen and (max-width: 460px) {
+  .hero {
+    background-position: 24% 56%;
+  }
+  .hero__info {
+    padding: 80px 30px;
+  }
+  .hero__title {
+    font-size: 54px;
+    line-height: 62px;
+    max-width: 324px;
+    margin: 20px 0;
+  }
+
+  .hero__text {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+
+  .hero__email {
+    min-width: 99%;
+    .hero__input {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .hero__btn {
+    display: none;
+  }
+
+  .hero__sm {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .hero__partners-box {
+    display: block;
+  }
+
+  .hero__partner-text {
+    margin-bottom: 20px;
+  }
+}
